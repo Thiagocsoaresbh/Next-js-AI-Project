@@ -6,7 +6,7 @@ import { useState } from "react";
 const Page = () => {
   const [sidebarOpened, setSidebarOpened] = useState(true);
   const closeSidebar = () => {
-
+    setSidebarOpened(false);
   }
   
   return (
@@ -18,7 +18,7 @@ const Page = () => {
 
       </Sidebar>
       <section className="flex flex-col w-full text-white/75">
-        ...
+        <button onClick={() => setSidebarOpened(true)}>Abrir</button>
       </section>
     </main>
   );
